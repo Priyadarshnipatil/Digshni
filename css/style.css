@@ -739,6 +739,15 @@ couple-area end
 .clock-area {
     background: #bdc0cf;
     padding: 14px 5px 20px 20px;
+    /* height: 300px; */
+}
+
+@media (max-width: 767px) {
+    .clock-area {
+        background: #bdc0cf;
+        padding: 14px 5px 20px 20px;
+        height: 300px;
+    }
 }
 
 .count-down-area:before {
@@ -746,7 +755,7 @@ couple-area end
     width: 100%;
     height: 100%;
     position: absolute;
-    background: #bdc0cf;
+    /* background: #bdc0cf; */
     opacity: .8;
     left: 0;
     top: 0;
@@ -814,7 +823,7 @@ couple-area end
     float: left;
     text-align: center;
     border: 1px solid rgba(255, 255, 255, 0.2);
-    color: #fff;
+    color: black;
     padding: 20px 0;
 }
 
@@ -842,6 +851,7 @@ couple-area end
 
     .count-down-section #clock {
         margin-right: 15px;
+        margin-top: -50px;
     }
 
     .clock-area {
@@ -886,6 +896,27 @@ couple-area end
 .count-down-clock .box .date {
     font-family: 'Great Vibes', cursive;
     font-weight: 400;
+}
+
+@media (max-width: 767px) {
+    .count-down-section .row {
+        display: flex;
+        margin-top: -83px;
+        flex-wrap: nowrap; /* Prevent wrapping */
+        justify-content: space-between; /* Space out the elements */
+        align-items: center; /* Align items vertically */
+    }
+
+    .section-area, 
+    .clock-area {
+        flex: 1; /* Make both sections take equal space */
+        text-align: center; /* Center-align content */
+        padding: 10px; /* Add some spacing */
+    }
+
+    .clock-area {
+        padding-left: 0; /* Remove extra padding */
+    }
 }
 
 .section-area {
@@ -1228,7 +1259,7 @@ welcome-area
     left: 0;
     width: 100%;
     height: 100%;
-    background: #bdc0cf;
+    /* background: #bdc0cf; */
     opacity: .9;
 }
 
@@ -1381,6 +1412,14 @@ person-area
     transition: all 0.5s;
 }
 
+/* Ensure images in the family section take 100% width and height for desktop view */
+@media (min-width: 992px) {
+    .person-img img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover; /* Ensures the image scales properly without distortion */
+    }
+}
 .person-wrap:hover .person-img img {
     -webkit-transform: scale(1.2) rotate(5deg);
     -ms-transform: scale(1.2) rotate(5deg);
